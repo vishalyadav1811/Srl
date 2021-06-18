@@ -1,10 +1,12 @@
-var WEBAPP= window.location.pathname.split("/")[1];
+// var WEBAPP= window.location.pathname.split("/")[1];
+var WEBAPP ="http://127.0.0.1/mgsr/adminapi/";
 var http={
 	requestParam:null,	
 	postRequest:{ "send":function(action, data, callBackFunc){ 
 							http.loader(true);
 							var postRequest = new AjaxPostRequest();
-							postRequest.url = "/"+WEBAPP+action ; 
+							//postRequest.url = "/"+WEBAPP+action ;
+							postRequest.url = WEBAPP+action ; 
 							postRequest.data = data;
 							
 							postRequest.callBack = function(response){
@@ -16,8 +18,9 @@ var http={
 	getRequest:{ "send":function(action,  callBackFunc){ 
 					http.loader(true);
 					var  getRequest = new AjaxGetRequest();
-					getRequest.url = "/"+WEBAPP+action;
-					
+					//getRequest.url = "/"+WEBAPP+action;
+					getRequest.url = WEBAPP+action;
+							
 					getRequest.callBack = function(response){
 						callBackFunc(response);	
 					};
