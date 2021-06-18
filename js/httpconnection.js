@@ -6,7 +6,8 @@ var http={
 							http.loader(true);
 							var postRequest = new AjaxPostRequest();
 							//postRequest.url = "/"+WEBAPP+action ;
-							postRequest.url = WEBAPP+action ; 
+							postRequest.url = WEBAPP+action ;
+							
 							postRequest.data = data;
 							
 							postRequest.callBack = function(response){
@@ -86,8 +87,10 @@ function AjaxGetRequest(){
 			type:'GET', 
 			beforeSend: function (xhr) {
 				             xhr.setRequestHeader("X-Ajax-call", "true");
+							 xhr.setRequestHeader("versioncode", "9");
+							 xhr.setRequestHeader("authkey", "G4s4cCMx2aM7lky1");
 			},
-	  		data:'',
+			data:'',
 			accept:'application/json',	
 			callBack : this.callBack ,	
 		  	success:function(response) { 
