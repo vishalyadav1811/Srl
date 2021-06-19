@@ -44,11 +44,16 @@ https://templatemo.com/tm-542-new-vision
 }
 
 .important_Links_Image_Section {
-  width: 100%;
+  width: 25%;
   height: 40%;
   margin-right: 0px;
   margin-left: 0px;
  
+}
+
+.important_Links_Other_Section{
+  width: 80%;
+  
 }
 
 .important_Links_Name_Section{
@@ -99,6 +104,7 @@ https://templatemo.com/tm-542-new-vision
   
 #link_Name{
   color: black;
+  font-size: 33px;
 }
 #link_Name_Details{
 font-size: small;
@@ -177,22 +183,10 @@ font-size: small;
         
        
         <!-- Main -->
-        <main>
+        <main id="mainDiv">
           <!-- Welcome section -->
 
-          <div class="important_Links" >
-            <div class ="important_Links_Image_Section"> 
-                        <img class="responseive_importnat_Imge" src="img/gallery-item-01.jpg" alt="Welcome image" />
-            </div>
-            
-              <div class ="important_Links_Other_Section">
-                <div class ="important_Links_Name_Section">
-                    <p id="link_Name">Best collection</p> </div>  
-                <div class ="important_Links_Name_Matter_Section">
-                  <p id="link_Name_Details">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo temporibus eius ex repellendus ea quasi assumenda consequatur, ipsum a, aliquam distinctio similique perferendis voluptatum minima tenetur quos expedita id libero! Vel, ducimus. Quos repellat iure, voluptates aperiam ad nam officiis expedita ducimus exercitationem. Mollitia veritatis explicabo blanditiis quod ipsam ipsum iure sapiente eum, suscipit ducimus odio. Tenetur itaque, laboriosam, repellat veritatis minima, nihil ipsa perspiciatis quaerat eaque dolores est modi quia et ut perferendis voluptatum. Sit vitae quas voluptatem nemo adipisci, dignissimos non reiciendis! </p></div>
-              </div>
-
-          </div>
+       
 
 
          <!-- 
@@ -220,19 +214,19 @@ font-size: small;
   
             </div>
 
-
-
             
           <div class="important_Links" >
-            <div class ="important_Links_Image_Section">           <img src="img/gallery-item-08.jpg" alt="Welcome image" />
+            <div class ="important_Links_Image_Section">  <a   href="http://www.google.co.in">   <img src="img/gallery-item-08.jpg" alt="Welcome image" /> </a>       
             </div>
             
             <div class ="important_Links_Other_Section">
-              <div class ="important_Links_Name_Section">  <p id="link_Name">Best collection</p> </div>  
+              <div class ="important_Links_Name_Section"> <a   href="http://www.google.co.in" runat="server" id="link_Name">Best collection</a></div>  
               <div class ="important_Links_Name_Matter_Section"><p id="link_Name_Details">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo temporibus eius ex repellendus ea quasi assumenda consequatur, ipsum a, aliquam distinctio similique perferendis voluptatum minima tenetur quos expedita id libero! Vel, ducimus. Quos repellat iure, voluptates aperiam ad nam officiis expedita ducimus exercitationem. Mollitia veritatis explicabo blanditiis quod ipsam ipsum iure sapiente eum, suscipit ducimus odio. Tenetur itaque, laboriosam, repellat veritatis minima, nihil ipsa perspiciatis quaerat eaque dolores est modi quia et ut perferendis voluptatum. Sit vitae quas voluptatem nemo adipisci, dignissimos non reiciendis! </p></div>
             </div>
   
             </div>
+
+
 -->
           
       </main>
@@ -253,27 +247,26 @@ font-size: small;
      function getImportantsLinksResponse(responseObj){
       console.log( responseObj );
      
-      if(responseObj.status!="success"){
-      alert("fail");
-			//renderErrorMessage(responseObj.error);
-			//$(".rof-list-contentwrapper").scrollTop(0);
-			return;
-		}
+        if(responseObj.status!="success"){
+        alert("fail");
+        //renderErrorMessage(responseObj.error);
+        //$(".rof-list-contentwrapper").scrollTop(0);
+        return;
+        }
   		var msgArr = responseObj.dataList;
        if(msgArr.length>0){
+        var hmtlDesgin='';
         for(var i=0; i<msgArr.length; i++){
          var msgArrObj =msgArr[i];
-          var hmtlDesgin='';
            hmtlDesgin+='<div class="important_Links" >';
-           hmtlDesgin+='<div class ="important_Links_Image_Section">'; 
-           hmtlDesgin+='<img class="responseive_importnat_Imge" src='+ +'alt="Welcome image" /></div>';
+           hmtlDesgin+='<div class ="important_Links_Image_Section">  <a href="'+msgArrObj['link']+'">   <img src="'+msgArrObj['imageUrl']+'" /> </a></div>';
            hmtlDesgin+='<div class ="important_Links_Other_Section">';
            hmtlDesgin+='<div class ="important_Links_Name_Section">';
-           hmtlDesgin+= '<a  href="company.html"><p id="link_Name">'+ +'</p> </div></a>';
+           hmtlDesgin+= '<a  href="' + msgArrObj['link'] + '"id="link_Name" >'+msgArrObj['displayName'] +'</p> </div></a>';
            hmtlDesgin+='<div class ="important_Links_Name_Matter_Section">';
-           hmtlDesgin+='<p id="link_Name_Details"> '+ +'</p></div></div></div>'; 
-
-        }
+           hmtlDesgin+='<p id="link_Name_Details"> ' + msgArrObj['description'] + '</p></div></div></div>'; 
+           }
+         $("#mainDiv").html(hmtlDesgin);
 
        }
 	  	//renderSuccessMessage(msgArr);
@@ -283,7 +276,7 @@ font-size: small;
 
    $( document ).ready(function() {
     console.log( "ready!" );
-    http.getRequest.send("getImportantLinksSrl", "{}", getImportantsLinksResponse);	
+    http.getRequest.send("getImportantLinksSrl", getImportantsLinksResponse);	
  
   });
 

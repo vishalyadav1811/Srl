@@ -17,7 +17,7 @@ var http={
 						 }
 	},
 	getRequest:{ "send":function(action,  callBackFunc){ 
-		s			http.loader(true);
+					http.loader(true);
 					var  getRequest = new AjaxGetRequest();
 					//getRequest.url = "/"+WEBAPP+action;
 					getRequest.url = WEBAPP+action;
