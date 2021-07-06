@@ -11,35 +11,75 @@
     <link href="css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
     <link href="slick/slick.css" rel="stylesheet" /> <!-- https://kenwheeler.github.io/slick/ -->
     <link href="slick/slick-theme.css" rel="stylesheet" />
-	<link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com -->
-	<link href="css/templatemo-new-vision.css" rel="stylesheet" />
+	  <link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com -->
+	  <link href="css/templatemo-new-vision.css" rel="stylesheet" />
     <link href ="css/drop_down.css" rel="stylesheet"/>
     <!-- https://www.aamazingit.com/ -->
+    
     <style>
-.tm-nav-link {
-    font-size: 14px;
-    text-decoration: none;
-    color: rgb(10, 10, 10);
-    display: inline-block;
-    padding: 11px 5px;
-    margin-left: 18px;
-    border-bottom: 21px solid transparent;
-}
+    .tm-nav-link {
+        font-size: 14px;
+        text-decoration: none;
+        color: rgb(239 232 232);
+        display: inline-block;
+        padding: 11px 5px;
+        margin-left: 18px;
+        border-bottom: 21px solid transparent;
+    }
+    .tm-site-name {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 2.em;
+        padding-left: 35px;
+        color: #ddd;
+        
+    }
 
+    #container-fluid {
+        max-width: 1200px;
+        background-color: #033b5af0;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .tm-site-icon {
+        padding: 6px;
+        margin-left: 32px;
+        color: #0e0e0e;
+    }
+    .nav-item .tm-nav-link:hover, .nav-item.active .tm-nav-link {
+        color: #1BA098;
+        border-bottom: 5px solid #1baaa1;
+        border-left: none;
+    }
+
+    
+    .container-fluid {
+        max-width: 1200px;
+        background-color: white;
+        padding-left: 31px;
+        padding-right: 30px;
+        margin-top: -65px;
+    }
     </style>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+  
 
+<script> 
+  $(function(){ 
+      $("#silder").load("imageSilder2.html"); 
+  }); 
+</script>  
     
 </head>
 <body>
 
-    <div class="container-fluid">
+  <div>
+    <div class="container-fluid" id="container-fluid" style="margin-top: 1px;">
         <div class="tm-site-header">
             <div class="row">
                 <div class="col-12 tm-site-header-col">
-                    <div class="tm-site-header-left" style="
-                    text-align: center;
-                    margin: -51px 34px 0px -57px;
-                ">
+                    <div class="tm-site-header-left" style="text-align: center; margin: -51px 34px 0px -57px;">
                         <i class="far fa-2x fa-eye tm-site-icon"></i>
                         <h1 class="tm-site-name">Saral Business</h1>
                     </div>
@@ -60,21 +100,20 @@
                             <ul class="navbar-nav mr-auto">
                              <!--<li class="nav-item active"> --> 
                               <li class="nav-item">
-                                <a class="nav-link tm-nav-link" href="index.html" style="width: 50px;">Home </a>
+                                <a class="nav-link tm-nav-link" href="index.html?pageName=index" style="width: 50px;">Home </a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link tm-nav-link" href="company.html" style="
+                                <a class="nav-link tm-nav-link" href="company.html?pageName=company" style="
                                 margin: 0px 10px 0px 10px;
                                 width: 98px;">Our Company</a>   </li>
                               <li class="nav-item">
-                                <a class="nav-link tm-nav-link" href="important_Links.html" style="
+                                <a class="nav-link tm-nav-link" href="important_Links.html?pageName=importantLinks" style="
                                 margin: 0px 10px 0px 10px;
                                 width: 105px;">Important Links</a> 
                               </li>
                                 
                               <li class="nav-item">
-                                <div class=" nav-link tm-nav-link  dropdown" style="width: 42px;
-                                margin: 0px 10px 0px 10px;">
+                                <div class=" nav-link tm-nav-link  dropdown" style="width: 42px; margin: 0px 10px 0px 10px;">
                                     <a class="dropbtn"  >Services</a>
                                     <div class="dropdown-content">
                                     <a href=" https://www.cbic-gst.gov.in/compensation-cess-bill-e.html#
@@ -86,24 +125,24 @@
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link tm-nav-link" href="waiting.html">Download</a>
+                            <a class="nav-link tm-nav-link" href="waiting.html?pageName=waiting">Download</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link tm-nav-link" href="waiting.html">Jugements</a>
+                            <a class="nav-link tm-nav-link" href="waiting.html?pageName=waiting">Jugements</a>
                           </li>
                           
                           <li class="nav-item">
-                            <a class="nav-link tm-nav-link" href="waiting.html">FAQ</a>
+                            <a class="nav-link tm-nav-link" href="waiting.html?pageName=waiting">FAQ</a>
                          </li>
                           <li class="nav-item">
-                              <a class="nav-link tm-nav-link" href="waiting.html" style="width: 100px;">Order Security</a>
+                              <a class="nav-link tm-nav-link" href="waiting.html?pageName=waiting" style="width: 100px;">Order Security</a>
                            </li>
                               <li class="nav-item">
                                     <div class=" nav-link tm-nav-link  dropdown">
                                         <a class="dropbtn" >Gallery</a>
                                         <div class="dropdown-content">
-                                        <a href="gallery_photo.html">Photo</a>
-                                        <a href="gallery_video.html">Viedo</a>
+                                        <a href="gallery_photo.html?pageName=galleryPhoto">Photo</a>
+                                        <a href="gallery_video.html?pageName=galleryVideo">Viedo</a>
                                         </div>
                                     </div>
                                 </a>
@@ -137,9 +176,15 @@
                     </div>
                 </div>
             </div>
-        </div>
- 
+          </div>
+        </div>                    
+        <div id="silder"></div>
+        
+      </div>
+
 <script>
+      <div>sdfsdfasfsf</div>
+
 //   $( ".nav-item" ).click(function() {
 //   alert( "Handler for .click() called." );
 //   $( ".nav-item" ).removeClass("active");
@@ -149,7 +194,8 @@
 //   document.getElementsById("test").style.border ="10px solid red";
 // });
 
-</script> 
+</script>
+          
       </body>
 
       </html>
