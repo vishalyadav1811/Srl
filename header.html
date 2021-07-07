@@ -37,21 +37,36 @@
 
     #container-fluid {
         max-width: 1200px;
-        background-color: #033b5af0;
+        background-color: #051547;
         padding-left: 40px;
         padding-right: 40px;
     }
 
+    .tm-menu-container-outer {
+    display: flex;
+    /* justify-content: flex-end; */
+    margin-left: 0;
+    background-color: #2c4e86
+}
+  .tm-site-header-col {
+     display:block;
+    justify-content: space-between;
+    background-color: #0d309e;
+    }
     .tm-site-icon {
-        padding: 6px;
-        margin-left: 32px;
-        color: #0e0e0e;
+      margin-left: -16px;
+      color: #efe7e7;
     }
     .nav-item .tm-nav-link:hover, .nav-item.active .tm-nav-link {
         color: #1BA098;
         border-bottom: 5px solid #1baaa1;
         border-left: none;
     }
+
+    element.style {
+    text-align: center;
+    margin: -28px 789px 0px 0px;
+}
 
     
     .container-fluid {
@@ -60,7 +75,16 @@
         padding-left: 31px;
         padding-right: 30px;
         margin-top: -65px;
+       
     }
+  .navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    height: 50px;
+    margin-bottom: -2px;
+}
     </style>
 <script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
   
@@ -79,7 +103,7 @@
         <div class="tm-site-header">
             <div class="row">
                 <div class="col-12 tm-site-header-col">
-                    <div class="tm-site-header-left" style="text-align: center; margin: -51px 34px 0px -57px;">
+                    <div class="tm-site-header-left" >
                         <i class="far fa-2x fa-eye tm-site-icon"></i>
                         <h1 class="tm-site-name">Saral Business</h1>
                     </div>
@@ -100,71 +124,87 @@
                             <ul class="navbar-nav mr-auto">
                              <!--<li class="nav-item active"> --> 
                               <li class="nav-item">
-                                <a class="nav-link tm-nav-link" href="index.html?pageName=index" style="width: 50px;">Home </a>
+                                <a class="nav-link tm-nav-link" href="index.html?pageName=Home" style="width: 50px; margin: 0px 0px 0px 5px;">Home </a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link tm-nav-link" href="company.html?pageName=company" style="
-                                margin: 0px 10px 0px 10px;
+                                <a class="nav-link tm-nav-link" href="company.html?pageName=OurCompany" style="
+                                margin: 0px 5px 0px 5px; 
                                 width: 98px;">Our Company</a>   </li>
-                              <li class="nav-item">
-                                <a class="nav-link tm-nav-link" href="important_Links.html?pageName=importantLinks" style="
-                                margin: 0px 10px 0px 10px;
-                                width: 105px;">Important Links</a> 
-                              </li>
-                                
-                              <li class="nav-item">
-                                <div class=" nav-link tm-nav-link  dropdown" style="width: 42px; margin: 0px 10px 0px 10px;">
+                              
+                              
+                                <li class="nav-item">
+                                  <div class=" nav-link tm-nav-link  dropdown" style="width: 60px; margin: 0px 5px 0px 5px;">
                                     <a class="dropbtn"  >Services</a>
-                                    <div class="dropdown-content">
-                                    <a href=" https://www.cbic-gst.gov.in/compensation-cess-bill-e.html#
-                                    ">Gst Act</a>
-                                    <a href=" https://www.cbic-gst.gov.in/compensation-cess-bill-e.html#
-                                    ">Gst Rules</a>
+                                      <div class="dropdown-content">
+                                      <a href=" https://www.cbic-gst.gov.in/compensation-cess-bill-e.html#
+                                      ">Gst Act</a>
+                                      <a href=" https://www.cbic-gst.gov.in/compensation-cess-bill-e.html#
+                                      ">Gst Rules</a>
                                     </div>
-                                </div>
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link tm-nav-link" href="waiting.html?pageName=waiting">Download</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link tm-nav-link" href="waiting.html?pageName=waiting">Jugements</a>
-                          </li>
-                          
-                          <li class="nav-item">
-                            <a class="nav-link tm-nav-link" href="waiting.html?pageName=waiting">FAQ</a>
-                         </li>
-                          <li class="nav-item">
-                              <a class="nav-link tm-nav-link" href="waiting.html?pageName=waiting" style="width: 100px;">Order Security</a>
-                           </li>
-                              <li class="nav-item">
-                                    <div class=" nav-link tm-nav-link  dropdown">
-                                        <a class="dropbtn" >Gallery</a>
-                                        <div class="dropdown-content">
-                                        <a href="gallery_photo.html?pageName=galleryPhoto">Photo</a>
-                                        <a href="gallery_video.html?pageName=galleryVideo">Viedo</a>
-                                        </div>
-                                    </div>
+                                  </div>
                                 </a>
+                               </li>
+                               <li class="nav-item">
+                                <a class="nav-link tm-nav-link" href="waiting.html?pageName=Download" style="width: 70px; margin: 0px 5px 0px 5px;">Download</a>
                               </li>
+                              
+                              
+                              <li class="nav-item">
+                                <div class=" nav-link tm-nav-link  dropdown" style="
+                                margin: 0px 5px 0px 5px; width: 50px;">
+                                    <a class="dropbtn" >Gallery</a>
+                                    <div class="dropdown-content">
+                                    <a href="gallery_photo.html?pageName=galleryPhoto">Photo</a>
+                                    <a href="gallery_video.html?pageName=galleryVideo">Viedo</a>
+                                    </div>
+                                  </div>
+                                  </a>
+                                  </li> 
+
+                                  
+                                  <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="important_Links.html?pageName=importantLinks" style="
+                                        margin: 0px 5px 0px 5px;
+                                      width: 115px;">Important Links</a> 
+                                  </li>
+                                
+                                 <li class="nav-item">
+                                     <a class="nav-link tm-nav-link" href="waiting.html?pageName=Jugements" style="margin: 0px 5px 0px 5px;">Jugements</a>
+                                  </li>
+                                  
                               <li class="nav-item" id="test">
-                                <div class=" nav-link tm-nav-link  dropdown " style="width: 142px;">
-                                    <a class="dropbtn" >Circulars Notification</a>
+                                <div class=" nav-link tm-nav-link  dropdown " style="width: 161px; margin: 0px 5px 0px 5px;">
+                                    <a class="dropbtn" >Circulars & Notification</a>
                                     <div class="dropdown-content">
                                     <a href="https://www.cbic-gst.gov.in/central-tax-notifications.html">Notification</a>
                                     <a href="https://www.cbic-gst.gov.in/circulars.html">Circulars</a>
-            
-                                    <!-- <a href="https://www.cbic-gst.gov.in/circulars.html">Orders</a>
-                                    <a href="https://www.cbic.gov.in/resources//htdocs-cbec/legelaffairs/dlaidx_report.html">Jugements</a>
-                                    <a href="https://www.cbic-gst.gov.in/gst-goods-services-rates.html">Hsn Code</a>
-                                    <a href="gallery_video.html">Gst Rate Finder</a>
-                                    <a href="https://www.cbic-gst.gov.in/pdf/18062019-FAQs-EwayBill-Faq.pdf">Eway Bill</a>
-                                    <a href="https://www.cbic-gst.gov.in/pdf/18062019-FAQs-EwayBill-Faq.pdf">FAQ</a>
-                                     -->
                                     </div>
                                 </div>
                             </a>
                           </li>
+                          <li class="nav-item">
+                            <a class="nav-link tm-nav-link" href="waiting.html?pageName=OtherServices" style="width: 105px; margin: 0px 5px 0px 5px;">Other Services</a>
+                         </li>
+                            
+                         <li class="nav-item">
+                          <a class="nav-link tm-nav-link" href="waiting.html?pageName=CityView" style="margin: 0px 5px 0px 5px; width: 66px;">City View</a>
+                       </li>
+                        
+                       <li class="nav-item">
+                         <a class="nav-link tm-nav-link" href="waiting.html?pageName=FAQ" style="margin: 0px 5px 0px 5px; width: 27px;">FAQ</a>
+                       </li>
+                      
+                       <li class="nav-item">
+                        <a class="nav-link tm-nav-link" href="contact.html?pageName=ContactUs" style="margin: 0px 5px 0px 5px; width: 78px;">Contact Us</a>
+                      </li>
+
+
+                              
+
+
+                          
+                          
+                              
                             </ul>
 <!-- Links -->
                         
@@ -183,16 +223,49 @@
       </div>
 
 <script>
-      <div>sdfsdfasfsf</div>
+     function getImageSilderResponse(responseObj){
+      console.log( responseObj );
+     
+        if(responseObj.status!="success"){
+        alert("fail");
+        //renderErrorMessage(responseObj.error);
+        //$(".rof-list-contentwrapper").scrollTop(0);
+        return;
+        }
+  		var msgArr = responseObj.dataList;
+       if(msgArr.length>0){
+         $("#imageSilder1").attr("src",msgArr[0]);
+         $("#imageSilder2").attr("src",msgArr[1]);
+         $("#imageSilder3").attr("src",msgArr[2]);
+         $("#imageSilder4").attr("src",msgArr[3]);
+         $("#imageSilder5").attr("src",msgArr[4]);
+        }
+	  	//renderSuccessMessage(msgArr);
 
-//   $( ".nav-item" ).click(function() {
-//   alert( "Handler for .click() called." );
-//   $( ".nav-item" ).removeClass("active");
-//  });
-// var elemtn;
-// document.getElementsById("test").addEventListen("click",function(){
-//   document.getElementsById("test").style.border ="10px solid red";
-// });
+		//$(".rof-list-contentwrapper").scrollTop(0);
+ 	}
+
+    $( document ).load(function() {
+      console.log( "ready!" );
+      var locationValue = (new URL(location.href)).searchParams.get('pageName');
+      console.log(locationValue);
+      http.getRequest.send("getImageSilder"+locationValue, getImageSilderResponse);	
+    });
+
+    // $(document).ready(function () {  
+    //     var name = GetParameterValues('Name');  
+    //     var id = GetParameterValues('ID');  
+    //     alert("Hello " + name + " your ID is " + id);  
+    //     function GetParameterValues(param) {  
+    //         var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');  
+    //         for (var i = 0; i < url.length; i++) {  
+    //             var urlparam = url[i].split('=');  
+    //             if (urlparam[0] == param) {  
+    //                 return urlparam[1];  
+    //             }  
+    //         }  
+    //     }  
+    // }); 
 
 </script>
           
