@@ -27,7 +27,13 @@
     display: block;
   }
   
-  .dropdown-content a:hover {background-color:  rgb(13 48 158);}
+  .dropdown-content a:hover {
+    /* background-color:  rgb(13 48 158); */
+    color: #f4f4f4;
+    background: #83f4f46e;
+    box-shadow: 0px 0px 1px #a8f3fc, 0 0 6px #a8f3fc, 0 0 0px #a8f3fc;
+    transition-delay: 0.1s;
+  }
   
   .dropdown:hover .dropdown-content {display: block;}
   
