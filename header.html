@@ -77,14 +77,74 @@
         margin-top: -65px;
        
     }
-  .navbar-expand-lg .navbar-collapse {
-    display: -ms-flexbox!important;
-    display: flex!important;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
-    height: 50px;
-    margin-bottom: -2px;
-}
+    .navbar-expand-lg .navbar-collapse {
+      display: -ms-flexbox!important;
+      display: flex!important;
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+      height: 50px;
+      margin-bottom: -2px;
+      
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0px;
+        padding-left: 0px;
+        border: 2px solid;
+        padding: -4px 2px 2px 2px;
+    }
+    tm-nav > ul {
+        display: flex;
+        flex-direction: row;
+        /* padding-right: 20px; */
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox!important;
+        -ms-flex-preferred-size: auto;
+        margin: 0px -22px 0px -29px;
+    }
+
+    .divider{
+        position:absolute;
+        left:50%;
+        top:10%;
+        bottom:10%;
+        border-left:1px solid white;
+    }
+    .headerInner{
+        display: flex;
+    }
+
+    
+    .ulClass{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        height: 30px;
+        line-height: 30px;
+        background-color: #1d1564;
+        font-size: 13px;
+    }
+    .liClass{
+        float: left;
+        border-right: 1px solid black;
+    }
+    .aClass{
+        display: block;
+        padding: 0px 10px;
+        color: white;
+        text-decoration: none;
+    }
+     .aClass:hover{
+        color: #2f6fb4;
+        background: #e7e3f40f;
+        box-shadow: 0px 0px 1px #a8f3fc, 0 0 6px #a8f3fc, 0 0 0px #a8f3fc;
+             transition-delay: 0.1s;
+        } 
+
+
+
     </style>
 <script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
   
@@ -107,112 +167,57 @@
                         <i class="far fa-2x fa-eye tm-site-icon"></i>
                         <h1 class="tm-site-name">Saral Business</h1>
                     </div>
-                    <div class="tm-site-header-right tm-menu-container-outer">
+                    
+                    <!-- main heder div -->
                         
-                        <!--Navbar-->
-                        <nav class="navbar navbar-expand-lg">
-                        
-                          <!-- Collapse button -->
-                          <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-                            aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-                                class="fas fa-bars fa-1x"></i></span></button>
-                        
-                          <!-- Collapsible content -->
-                          <div class="collapse navbar-collapse tm-nav" id="navbarSupportedContent1">
-                        
-                            <!-- Links -->
-                            <ul class="navbar-nav mr-auto">
-                             <!--<li class="nav-item active"> --> 
-                              <li class="nav-item">
-                                <a class="nav-link tm-nav-link" href="index.html?pageName=Home" style="width: 50px; margin: 0px 0px 0px 5px;">Home </a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link tm-nav-link" href="company.html?pageName=OurCompany" style="
-                                margin: 0px 5px 0px 5px; 
-                                width: 98px;">Our Company</a>   </li>
-                              
-                              
-                                <li class="nav-item">
-                                  <div class=" nav-link tm-nav-link  dropdown" style="width: 60px; margin: 0px 5px 0px 5px;">
-                                    <a class="dropbtn"  >Services</a>
-                                      <div class="dropdown-content">
-                                      <a href=" https://www.cbic-gst.gov.in/compensation-cess-bill-e.html#
-                                      ">Gst Act</a>
-                                      <a href=" https://www.cbic-gst.gov.in/compensation-cess-bill-e.html#
-                                      ">Gst Rules</a>
+                    <div class="mainHeader">
+                        <!--inner div-->
+                         <div class ="headerInner">
+                            <!--all div-->
+                            <ul class="ulClass">
+                                <li class="liClass"><a class="aClass" href="index.html?pageName=Home">Home</a></li>
+                                <li class="liClass"><a class="aClass" href="company.html?pageName=OurCompany">Our Company</a></li>
+                                <li class="liClass">
+                                    <div class=" aClass dropdown">
+                                        <a class="dropbtn"  >Services</a>
+                                          <div class="dropdown-content">
+                                          <a href=" https://www.cbic-gst.gov.in/compensation-cess-bill-e.html#
+                                          ">Gst Act</a>
+                                          <a href=" https://www.cbic-gst.gov.in/compensation-cess-bill-e.html#
+                                          ">Gst Rules</a>
+                                        </div>
+                                      </div>
+                                </li>
+                                <li class="liClass"><a class="aClass" href="waiting.html?pageName=Download">Download</a></li>
+                                <li class="liClass">
+                                    <div class=" aClass dropdown">
+                                        <a class="dropbtn" >Gallery</a>
+                                        <div class="dropdown-content">
+                                        <a href="gallery_photo.html?pageName=galleryPhoto">Photo</a>
+                                        <a href="gallery_video.html?pageName=galleryVideo">Video</a>
+                                        </div>
+                                      </div>
+                                </li>
+                                <li class="liClass"><a class="aClass" href="important_Links.html?pageName=importantLinks">Important Links</a></li>
+                                <li class="liClass"><a class="aClass" href="waiting.html?pageName=Jugements">Jugements</a></li>
+                                <li class="liClass">
+                                    <div class=" aClass dropdown " >
+                                        <a class="dropbtn" >Circulars & Notification</a>
+                                        <div class="dropdown-content">
+                                        <a href="https://www.cbic-gst.gov.in/central-tax-notifications.html">Notification</a>
+                                        <a href="https://www.cbic-gst.gov.in/circulars.html">Circulars</a>
+                                        </div>
                                     </div>
-                                  </div>
-                                </a>
-                               </li>
-                               <li class="nav-item">
-                                <a class="nav-link tm-nav-link" href="waiting.html?pageName=Download" style="width: 70px; margin: 0px 5px 0px 5px;">Download</a>
-                              </li>
-                              
-                              
-                              <li class="nav-item">
-                                <div class=" nav-link tm-nav-link  dropdown" style="
-                                margin: 0px 5px 0px 5px; width: 50px;">
-                                    <a class="dropbtn" >Gallery</a>
-                                    <div class="dropdown-content">
-                                    <a href="gallery_photo.html?pageName=galleryPhoto">Photo</a>
-                                    <a href="gallery_video.html?pageName=galleryVideo">Video</a>
-                                    </div>
-                                  </div>
-                                  </a>
-                                  </li> 
+                                </li>
 
-                                  
-                                  <li class="nav-item">
-                                    <a class="nav-link tm-nav-link" href="important_Links.html?pageName=importantLinks" style="
-                                        margin: 0px 5px 0px 5px;
-                                      width: 115px;">Important Links</a> 
-                                  </li>
-                                
-                                 <li class="nav-item">
-                                     <a class="nav-link tm-nav-link" href="waiting.html?pageName=Jugements" style="margin: 0px 5px 0px 5px;">Jugements</a>
-                                  </li>
-                                  
-                              <li class="nav-item" id="test">
-                                <div class=" nav-link tm-nav-link  dropdown " style="width: 161px; margin: 0px 5px 0px 5px;">
-                                    <a class="dropbtn" >Circulars & Notification</a>
-                                    <div class="dropdown-content">
-                                    <a href="https://www.cbic-gst.gov.in/central-tax-notifications.html">Notification</a>
-                                    <a href="https://www.cbic-gst.gov.in/circulars.html">Circulars</a>
-                                    </div>
-                                </div>
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link tm-nav-link" href="waiting.html?pageName=OtherServices" style="width: 105px; margin: 0px 5px 0px 5px;">Other Services</a>
-                         </li>
-                            
-                         <li class="nav-item">
-                          <a class="nav-link tm-nav-link" href="waiting.html?pageName=CityView" style="margin: 0px 5px 0px 5px; width: 66px;">City View</a>
-                       </li>
-                        
-                       <li class="nav-item">
-                         <a class="nav-link tm-nav-link" href="waiting.html?pageName=FAQ" style="margin: 0px 5px 0px 5px; width: 27px;">FAQ</a>
-                       </li>
-                      
-                       <li class="nav-item">
-                        <a class="nav-link tm-nav-link" href="contact.html?pageName=ContactUs" style="margin: 0px 5px 0px 5px; width: 78px;">Contact Us</a>
-                      </li>
-
-
-                              
-
-
+                                <li class="liClass"><a class="aClass" href="waiting.html?pageName=OtherServices">Other Services</a></li>
+                                <li class="liClass"><a class="aClass" href="waiting.html?pageName=CityView" >City View</a></li>
+                                <li class="liClass"><a class="aClass" href="waiting.html?pageName=FAQ">FAQ</a></li>
+                                <li class="liClass"><a class="aClass" href="contact.html?pageName=ContactUs">ContactUs</a></li>
                           
-                          
-                              
                             </ul>
-<!-- Links -->
-                        
-                          </div>
-                          <!-- Collapsible content -->
-                        
-                        </nav>
-                        <!--/.Navbar-->
+
+                         </div>
                     </div>
                 </div>
             </div>
