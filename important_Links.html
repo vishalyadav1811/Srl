@@ -247,7 +247,7 @@ font-size: small;
    $( document ).ready(function() {
     console.log( "ready!" );
     //http.getRequest.send("getImportantLinksSrl", getImportantsLinksResponse);	
-    var data ={"dataList":{"tableCode":"apctwebhotel", "storeId":"1", "typeId":"1"}};
+    var data ='{"dataList":{"tableCode":"apctwebhotel", "storeId":"1", "typeId":"1"}}';
 
     http.postRequest.send("getAdvertisement",data, getImportantsLinksResponse);	
     
