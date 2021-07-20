@@ -88,7 +88,7 @@ function AjaxGetRequest(){
 			type:'GET', 
 			beforeSend: function (xhr) {
 				             xhr.setRequestHeader("X-Ajax-call", "true");
-							 xhr.setRequestHeader("versioncode", "9");
+							 xhr.setRequestHeader("versioncode", "1");
 							 xhr.setRequestHeader("authkey", "G4s4cCMx2aM7lky1");
 			},
 			data:'',
