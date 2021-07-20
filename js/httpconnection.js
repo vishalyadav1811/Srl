@@ -1,6 +1,6 @@
 // var WEBAPP= window.location.pathname.split("/")[1];
-//var WEBAPP ="http://127.0.0.1/mgsr/adminapi/";
-var WEBAPP ="https://www.aapnicity.com/mgsr/adminapi/";
+var WEBAPP ="http://127.0.0.1/mgsr/adminapi/";
+//var WEBAPP ="https://www.aapnicity.com/mgsr/adminapi/";
 var http={
 	requestParam:null,	
 	postRequest:{ "send":function(action, data, callBackFunc){ 
