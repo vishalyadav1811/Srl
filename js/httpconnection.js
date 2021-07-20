@@ -88,8 +88,8 @@ function AjaxGetRequest(){
 			type:'GET', 
 			beforeSend: function (xhr) {
 				             xhr.setRequestHeader("X-Ajax-call", "true");
-							 xhr.setRequestHeader("versioncode", "1");
-							 xhr.setRequestHeader("authkey", "G4s4cCMx2aM7lky1");
+							 xhr.setRequestHeader("Versioncode", "1");
+							 xhr.setRequestHeader("Authkey", "G4s4cCMx2aM7lky1");
 			},
 			data:'',
 			accept:'application/json',	
@@ -136,8 +136,8 @@ function AjaxPostRequest(){
 				       xhr.setRequestHeader("Content-Type","application/json");
        					xhr.setRequestHeader("Accept","application/json");
        					xhr.setRequestHeader("X-Ajax-call", "true");
-						    xhr.setRequestHeader("versioncode", "1");
-						    xhr.setRequestHeader("authkey", "G4s4cCMx2aM7lky1");
+						    xhr.setRequestHeader("Versioncode", "1");
+						    xhr.setRequestHeader("Authkey", "G4s4cCMx2aM7lky1");
 					
 
 			},
