@@ -19,24 +19,29 @@ New Vision Template
 
 https://templatemo.com/tm-542-new-vision
 
--->
-<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+--><script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
   
 <script> 
-    $(function(){ 
-        $("#header").load("header.html"); 
+$(function(){ 
+        if ($(window).width() < 600) {
+            $("#header").load("mobileHeader.html"); 
+        }
+        else {
+            $("#header").load("header.html"); 
+        }
     }); 
 </script> 
 </head>
 
 <body>
+  <div>
 <!-- Page Header -->
 <div id="header"></div>
-
-     
+<div class="container-fluid">
+        <div class="tm-site-header">
+        
         <div class="row">
             <div class="col-12">
-                <div class="tm-main-bg tm-contact-bg"></div>        
             </div>
         </div>
         

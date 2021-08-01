@@ -3,4 +3,8 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home2/aapnicuc/public_html/srl
     - /bin/cp index.html $DEPLOYPATH
+<<<<<<< HEAD
     - /bin/cp style.css $DEPLOYPATH
+=======
+    - /bin/cp style.css $DEPLOYPATH
+>>>>>>> 602183795b2305513d58879151602f924c94333b

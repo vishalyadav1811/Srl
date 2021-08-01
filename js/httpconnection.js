@@ -1,5 +1,6 @@
 // var WEBAPP= window.location.pathname.split("/")[1];
-var WEBAPP ="http://127.0.0.1/mgsr/adminapi/";
+//var WEBAPP ="http://127.0.0.1/mgsr/adminapi/";
+var WEBAPP ="https://aapnicity.com/mgsr/adminapi/";
 var http={
 	requestParam:null,	
 	postRequest:{ "send":function(action, data, callBackFunc){ 
@@ -87,8 +88,8 @@ function AjaxGetRequest(){
 			type:'GET', 
 			beforeSend: function (xhr) {
 				             xhr.setRequestHeader("X-Ajax-call", "true");
-							 xhr.setRequestHeader("versioncode", "9");
-							 xhr.setRequestHeader("authkey", "G4s4cCMx2aM7lky1");
+							 xhr.setRequestHeader("Versioncode", "1");
+							 xhr.setRequestHeader("Authkey", "G4s4cCMx2aM7lky1");
 			},
 			data:'',
 			accept:'application/json',	
@@ -135,7 +136,9 @@ function AjaxPostRequest(){
 				       xhr.setRequestHeader("Content-Type","application/json");
        					xhr.setRequestHeader("Accept","application/json");
        					xhr.setRequestHeader("X-Ajax-call", "true");
-					 
+						    xhr.setRequestHeader("Versioncode", "1");
+						    xhr.setRequestHeader("Authkey", "G4s4cCMx2aM7lky1");
+					
 
 			},
 	  		data:this.data,

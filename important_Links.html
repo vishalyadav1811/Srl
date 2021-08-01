@@ -116,9 +116,14 @@ font-size: small;
 <script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
   
 <script> 
-    $(function(){ 
-        $("#header").load("header.html"); 
-    }); 
+   $(function(){ 
+        if ($(window).width() < 600) {
+            $("#header").load("mobileHeader.html"); 
+        }
+        else {
+            $("#header").load("header.html"); 
+        }
+    });
 </script> 
 </head>
 
@@ -241,8 +246,11 @@ font-size: small;
 
    $( document ).ready(function() {
     console.log( "ready!" );
-    http.getRequest.send("getImportantLinksSrl", getImportantsLinksResponse);	
- 
+    //http.getRequest.send("getImportantLinksSrl", getImportantsLinksResponse);	
+    var data ='{"dataList":{"tableCode":"apctwebhotel", "storeId":"1", "typeId":"1"}}';
+
+    http.getRequest.send("getAdvertisement", getImportantsLinksResponse);	
+    
   });
 
 

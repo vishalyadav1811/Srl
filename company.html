@@ -24,11 +24,16 @@ sdsd
 
 -->
 <script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
-  
+
 <script> 
     $(function(){ 
-        $("#header").load("header.html"); 
-    }); 
+        if ($(window).width() < 600) {
+            $("#header").load("mobileHeader.html"); 
+        }
+        else {
+            $("#header").load("header.html"); 
+        }
+    });
 </script> 
 </head>
 
